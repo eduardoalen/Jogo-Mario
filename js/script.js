@@ -1,6 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const score = document.querySelector('.score');
 
+let count = 0;
 
 const jump = () => {
     mario.classList.add('jump');
@@ -33,8 +35,11 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px'
         mario.style.marginTop = '40px'
 
+        alert(`Deu mole pivete! Seu score foi: ${count}`);
         clearInterval(loop);
     }
+    count++;
+    score.innerHTML = `SCORE: ${count}`;
 
 }, 10)
 
