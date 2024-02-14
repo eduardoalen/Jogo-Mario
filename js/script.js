@@ -21,7 +21,7 @@ const loop = setInterval(() => {
 
     console.log(marioPosition);
 
-    
+
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
 
         pipe.style.animation = 'none';
@@ -35,12 +35,12 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px'
         mario.style.marginTop = '40px'
 
-        alert(`Deu mole pivete! Seu score foi: ${count}`);
         clearInterval(loop);
     }
     count++;
     score.innerHTML = `SCORE: ${count}`;
 
 }, 10)
+
 
 document.addEventListener('keydown', jump);
